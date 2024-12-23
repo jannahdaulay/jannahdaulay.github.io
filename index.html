@@ -100,7 +100,7 @@
                         <div class="card">
                             <img src="img/projects/2.jpg" class="card-img-top" alt="projects2">
                             <div class="card-body">
-                              <p class="card-text">Kalkulator Sederhana</p>
+                              <p class="card-text">MY OSHI - ICEL1</p>
                             </div>
                           </div>
                     </div>
@@ -116,7 +116,7 @@
                         <div class="card">
                             <img src="img/projects/4.jpg" class="card-img-top" alt="projects4">
                             <div class="card-body">
-                              <p class="card-text">JKT48 - Langit Biru Cinta Searah</p>
+                              <p class="card-text">MY OSHI - ICEL2</p>
                             </div>
                           </div>
                     </div>
@@ -125,7 +125,7 @@
                         <div class="card">
                             <img src="img/projects/5.jpg" class="card-img-top" alt="projects5">
                             <div class="card-body">
-                              <p class="card-text">JKT48 - Rapsodi</p>
+                              <p class="card-text">MY OSHI - ICEL3</p>
                             </div>
                           </div>
                     </div>
@@ -146,18 +146,18 @@
                 </div>
                 <div class="row justify-content-center mb-3">
                     <div class="col-md-6">
-                        <form>
+                        <form name="contact-form">
                             <div class="mb-3">
                               <label for="name" class="form-label">Nama Lengkap</label>
-                              <input type="text" class="form-control" id="name" aria-describedby="name"/>
+                              <input type="text" class="form-control" id="name" aria-describedby="name" name="nama"/>
                             </div>
                             <div class="mb-3">
                               <label for="email" class="form-label">Email</label>
-                              <input type="email" class="form-control" id="email" aria-describedby="email"/>
+                              <input type="email" class="form-control" id="email" aria-describedby="email" name="email"/>
                             </div>
                             <div class="mb-3">
                                 <label for="pesan" class="form-label">Pesan</label>
-                                <textarea class="form-control" id="pesan" rows="3"></textarea>
+                                <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
                               </div>
                             <button type="submit" class="btn btn-primary">Kirim</button>
                           </form>
@@ -176,7 +176,20 @@
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
+
+    </script>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwX9PGUOsRmJjc7NUoKavXh_USJnTyjsqD9D7Zx-yqtGXe0etUSSM4StzGPgt87XfEmKA/exec'
+      const form = document.forms['contact-form']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
 
   </body>
 </html>
