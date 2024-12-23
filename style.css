@@ -1,0 +1,20 @@
+
+.jumbotron {
+    padding-top: 6rem;
+    background-color: #91B3BC;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#projects {
+    background-color: #91B3BC;
+    transition: transform 0.2s, box-shadow0.2s;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+section {
+    padding-top: 5rem;
+}
+.zoom-label:active {
+    transform: scale(1.1); /* ukuran label bertambah 10% */
+}
