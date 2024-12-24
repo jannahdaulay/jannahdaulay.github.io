@@ -21,3 +21,10 @@ section {
 .zoom-label:active {
     transform: scale(1.1); /* ukuran label bertambah 10% */
 }
+.gallery-img {
+    width: 100;
+}
+
+#gallery .row > * {
+    padding: 0;
+}

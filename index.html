@@ -11,6 +11,8 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
      <link rel="stylesheet" href="style.css"
 
@@ -39,6 +41,9 @@
                 <a class="nav-link" href="#projects">Projects</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="#gallery">Gallery</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="#contact">Contact</a>
               </li>
               
@@ -50,7 +55,7 @@
 
       <!-- Jumbotron -->
       <section class="jumbotron text-center">
-        <img src="img/profile.jpg" alt="NURJANNAH DLY" width="200" class="rounded-circle img-thumnail">
+        <img src="img/profile.jpg" alt="NURJANNAH DLY" width="200" class="rounded-circle img-thumnail"data-aos="zoom-out" />
         <h1 class="fst-normal text-light">NURJANNAH DLY</h1>
         <p class="lead text-light">Mahasiswa | Content Creator</p>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#233758" fill-opacity="1" d="M0,192L48,208C96,224,192,256,288,229.3C384,203,480,117,576,117.3C672,117,768,203,864,234.7C960,267,1056,245,1152,218.7C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
@@ -67,10 +72,10 @@
                     </div>
                 </div>
                 <div class="row justify-content-center fs-5 text-center">
-                    <div class="col-md-4">
+                    <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
                         <p class="text-light">Saya seorang mahasiswa di Universitas Sumatera Utara dengan jurusan Teknik Informatika. Saya bersemangat mengembangkan solusi teknologi yang inovatif.</p>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                         <p class="text-light">Disini, anda akan menemukan proyek - proyek yang telah saya kerjakan dalam pengembangan aplikasi, pemrograman dan teknologi aplikasi web. Melalui karya - karya saya ini, saya terus mengasah keterampilan dan pengetahuan saya di bidang teknologi.</p>
                     </div>
                 </div>
@@ -89,43 +94,43 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-md-4 mb-3">
-                        <div class="card">
-                            <img src="img/projects/1.jpg" class="card-img-top" alt="projects1">
-                            <div class="card-body bg-dark">
-                              <p class="card-text text-light">Abaikan Fotonya</p>
+                        <div class="card" data-aos="flip-left" data-aos-duration="500" >
+                            <img src="img/projects/1.jpg" class="card-img-top" alt="projects1" >
+                            <div class="card-body bg-dark" >
+                              <a href="https://www.instagram.com/dikara.nya/" class="card-link">ABAIKAN FOTONYA</a>
                             </div>
                           </div>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <div class="card">
+                        <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="100">
                             <img src="img/projects/2.jpg" class="card-img-top" alt="projects2">
                             <div class="card-body bg-dark">
-                              <p class="card-text text-light">MY OSHI - ICEL1</p>
+                              <a href="https://www.instagram.com/reel/DBTfDraviNr/" class="card-link">VIDEO RANDOM</a>
                             </div>
                           </div>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <div class="card">
+                        <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
                             <img src="img/projects/3.jpg" class="card-img-top" alt="projects3">
                             <div class="card-body bg-dark">
-                              <p class="card-text text-light">Abaikan Fotonya ygy</p>
+                              <a href="https://www.instagram.com/reel/DD6LJWuSmEa/" class="card-link">ABAIKAN FOTONYA YGY</a>
                             </div>
                           </div>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <div class="card">
+                        <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="300">
                             <img src="img/projects/4.jpg" class="card-img-top" alt="projects4">
                             <div class="card-body bg-dark">
-                              <p class="card-text text-light">MY OSHI - ICEL2</p>
+                              <a href="https://www.instagram.com/p/C16qp9mBHvy/" class="card-link">FOTO - MY OSHI</a>
                             </div>
                           </div>
                     </div>
                     
                     <div class="col-md-4 mb-3">
-                        <div class="card">
+                        <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="400">
                             <img src="img/projects/5.jpg" class="card-img-top" alt="projects5">
                             <div class="card-body bg-dark">
-                              <p class="card-text text-light">MY OSHI - ICEL3</p>
+                              <a href="https://www.instagram.com/p/CynOW1JBKgr/" class="card-link">FOTO - MY OSHI</a>
                             </div>
                           </div>
                     </div>
@@ -135,6 +140,63 @@
         </section>
 
          <!-- Akhir Projects -->
+          
+         <!-- Awal Gallery -->
+          
+           <section id="gallery">
+            <div class="container">
+              <div class="row text-center mb-3">
+                <div class="col">
+                    <h2 class="text-light">Gallery</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-3">
+                <a href="#">
+                  <img src="img/gallery/1.jpg" alt="Gambar 1" class="img-fluid gallery-img">
+                </a>
+              </div>
+              <div class="col-md-3">
+                <a href="#">
+                  <img src="img/gallery/2.jpg" alt="Gambar 2" class="img-fluid gallery-img">
+                </a>
+              </div>
+              <div class="col-md-3">
+                <a href="#">
+                  <img src="img/gallery/3.jpg" alt="Gambar 3" class="img-fluid gallery-img">
+                </a>
+              </div>
+              <div class="col-md-3">
+                <a href="#">
+                  <img src="img/gallery/4.jpg" alt="Gambar 4" class="img-fluid gallery-img">
+                </a>
+              </div>
+              <div class="col-md-3">
+                <a href="#">
+                  <img src="img/gallery/5.jpg" alt="Gambar 5" class="img-fluid gallery-img">
+                </a>
+              </div>
+              <div class="col-md-3">
+                <a href="#">
+                  <img src="img/gallery/6.jpg" alt="Gambar 6" class="img-fluid gallery-img">
+                </a>
+              </div>
+              <div class="col-md-3">
+                <a href="#">
+                  <img src="img/gallery/7.jpg" alt="Gambar 7" class="img-fluid gallery-img">
+                </a>
+              </div>
+              <div class="col-md-3">
+                <a href="#">
+                  <img src="img/gallery/8.jpg" alt="Gambar 8" class="img-fluid gallery-img">
+                </a>
+              </div>
+            </div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#233758" fill-opacity="1" d="M0,192L48,170.7C96,149,192,107,288,117.3C384,128,480,192,576,218.7C672,245,768,235,864,218.7C960,203,1056,181,1152,176C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+           </section>
+           
+           <!-- Akhir Gallery -->
 
           <!-- Contact -->
            <section id="contact">
@@ -147,7 +209,7 @@
                 <div class="row justify-content-center mb-3">
                     <div class="col-md-6">
                       <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
-                        <strong>Terima Kasih</strong> Pesan anda sudah kami terima.
+                        <strong>arigatōgozaimasu.</strong> Pesan anda sudah saya terima.
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                       </div>
                         <form name="contact-form">
@@ -177,16 +239,28 @@
            <!-- AkhirContact -->
 
     <!-- Footer -->
-     <footer class="bg-primary text-white text-center pb-5">
-        <p>Created with <i class="bi bi-house-heart-fill text-danger"></i> by <a href="https://www.instagram.com/jannahdaulay_/" class="text-white fw-bold">NURJANNAH DLY</a></p>
+     <footer class="bg-#1e2e49 text-white text-center pb-5">
+        <p>Created with <i class="bi bi-house-heart-fill text-danger"></i> by <a href="https://www.instagram.com/dikara.nya/" class="text-white fw-bold">NURJANNAH DLY</a></p>
      </footer>
      <!-- Akhir Footer -->
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+
+      const galleryImage = document.querySelectorAll('.gallery-img');
+      galleryImage.forEach((img, i) =>{
+        img.dataset.aos ='fade-down';
+        img.dataset.aosDelay = i* 100;
+        img.dataset.aosDuration = 500;
+      })
+      AOS.init();
     </script>
+
+
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbwX9PGUOsRmJjc7NUoKavXh_USJnTyjsqD9D7Zx-yqtGXe0etUSSM4StzGPgt87XfEmKA/exec'
       const form = document.forms['contact-form'];
