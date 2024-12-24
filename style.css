@@ -1,12 +1,15 @@
-
+body{
+    background-color: #1e2e49;
+    text-emphasis-color: white;
+}
 .jumbotron {
     padding-top: 6rem;
-    background-color: #91B3BC;
+    background-color: #1e2e49;
     animation: fadeIn 1s ease-in-out;
 }
 
 #projects {
-    background-color: #91B3BC;
+    background-color: #233758;
     transition: transform 0.2s, box-shadow0.2s;
     border: none;
     border-radius: 0.5rem;
