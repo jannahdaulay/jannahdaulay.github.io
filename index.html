@@ -71,7 +71,7 @@
                         <p class="text-light">Saya seorang mahasiswa di Universitas Sumatera Utara dengan jurusan Teknik Informatika. Saya bersemangat mengembangkan solusi teknologi yang inovatif.</p>
                     </div>
                     <div class="col-md-4">
-                        <p class="text-light">Disni, anda akan menemukan proyek - proyek yang telah saya kerjakan dalam pengembangan aplikasi, pemrograman dan teknologi aplikasi web. Melalui karya - karya ini, saya terus mengasah keterampilan dan pengetahuan saya di bidang teknologi.</p>
+                        <p class="text-light">Disini, anda akan menemukan proyek - proyek yang telah saya kerjakan dalam pengembangan aplikasi, pemrograman dan teknologi aplikasi web. Melalui karya - karya saya ini, saya terus mengasah keterampilan dan pengetahuan saya di bidang teknologi.</p>
                     </div>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                         <div class="card">
                             <img src="img/projects/1.jpg" class="card-img-top" alt="projects1">
                             <div class="card-body bg-dark">
-                              <p class="card-text text-light">Portfolio Sederhana</p>
+                              <p class="card-text text-light">Abaikan Fotonya</p>
                             </div>
                           </div>
                     </div>
@@ -108,7 +108,7 @@
                         <div class="card">
                             <img src="img/projects/3.jpg" class="card-img-top" alt="projects3">
                             <div class="card-body bg-dark">
-                              <p class="card-text text-light">Form Pendaftaran</p>
+                              <p class="card-text text-light">Abaikan Fotonya ygy</p>
                             </div>
                           </div>
                     </div>
@@ -146,6 +146,10 @@
                 </div>
                 <div class="row justify-content-center mb-3">
                     <div class="col-md-6">
+                      <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+                        <strong>Terima Kasih</strong> Pesan anda sudah kami terima.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                      </div>
                         <form name="contact-form">
                             <div class="mb-3">
                               <label for="name" class="form-label text-light">Nama Lengkap</label>
@@ -159,7 +163,11 @@
                                 <label for="pesan" class="form-label text-light">Pesan</label>
                                 <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
                               </div>
-                            <button type="submit" class="btn btn-danger">Kirim</button>
+                            <button type="submit" class="btn btn-danger btn-kirim">Kirim</button>
+                            <button class="btn btn-danger btn-loading d-none" type="button" disabled>
+                              <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                              <span role="status">Loading...</span>
+                            </button>
                           </form>
                     </div>
                 </div>
@@ -181,12 +189,30 @@
     </script>
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbwX9PGUOsRmJjc7NUoKavXh_USJnTyjsqD9D7Zx-yqtGXe0etUSSM4StzGPgt87XfEmKA/exec'
-      const form = document.forms['contact-form']
+      const form = document.forms['contact-form'];
+      const btnKirim = document.querySelector('.btn-kirim');
+      const btnLoading = document.querySelector('.btn-loading');
+      const myAlert = document.querySelector('.my-alert');
+
+
     
       form.addEventListener('submit', e => {
         e.preventDefault()
+        //ketika tombol submit diklik
+        //tampilkan tombol loading, hilangkan tombol kirim
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => console.log('Success!', response))
+          .then(response => {
+            //tampilkan tombol loading, hilangkan tombol loading
+            btnLoading.classList.toggle('d-none');
+            btnKirim.classList.toggle('d-none');
+            //tampilkan alert
+            myAlert.classList.toggle('d-none');
+            //reset formnya
+            form.reset();
+            console.log('Success!', response)
+          })
           .catch(error => console.error('Error!', error.message))
       })
     </script>
